@@ -2,7 +2,7 @@
   "id": "anti_clickbait_cn",
   "name": "清净世界",
   "description": "屏蔽标题党、营销号、解说号、饭圈黑话及政治黑话",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": "Yuzhong",
   "type": "feed",
   "rules": [
