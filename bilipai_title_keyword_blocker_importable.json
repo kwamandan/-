@@ -1,0 +1,616 @@
+{
+  "id": "title_keyword_blocker_kwamandan",
+  "name": "标题关键词屏蔽",
+  "description": "隐藏标题中包含指定标题党、营销号和短视频腔关键词的视频",
+  "version": "1.0.0",
+  "author": "kwamandan",
+  "type": "feed",
+  "rules": [
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "为什么",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "崩老头",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "你以为",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "麻了",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "只因",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "很少有人",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "这部电影",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "这个",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "我真的",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "卧槽",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "超恐怖",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "你真的",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "大型纪录片",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "滚出",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "天塌了",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "家人们",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "你敢信",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "小日子",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "阿三",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "美丽国",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "咱妈",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "央妈",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "夯爆了",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "人只是",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "禁片",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "太敢拍",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "谁懂啊",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "没事吧",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "挺急的",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "不演了",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "前方高能",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "太权威",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "外网",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "拉了",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "拉完了",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "已老实",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "搞笑",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "谁会",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "谁懂",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "谁能",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "听说",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "请问",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "疯了",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "扎心",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "无情",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "活久见",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "闭眼",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "一口气",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "解气",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "招魂",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "多恐怖",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "没想到",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "留子",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "震惊",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "变天",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "离谱",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "大聪明",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "绷不住",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "别笑",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "哭晕",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "你绝对",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "太敢说",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "当我",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "绝了",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "封神",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "底裤",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "功德",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "炸裂",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "力竭",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "一言难尽",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "天花板",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "所有人",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "全网",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "全网最",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "全程高能",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "万万没想到",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "果然",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "终于",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "原来",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "竟然",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "居然",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "曝光",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "当场",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "瞬间",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "全中国",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "全国人民",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "万万",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "细思极恐",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "后劲",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "后劲太大",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "破防",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "破大防",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "蚌埠住了",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "神作",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "神中神",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "逆天",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "离大谱",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "太真实了",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "不敢想象",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "不敢相信",
+      "action": "hide"
+    },
+    {
+      "field": "title",
+      "op": "contains",
+      "value": "做梦都没想到",
+      "action": "hide"
+    }
+  ]
+}
