@@ -1,8 +1,8 @@
 {
   "id": "anti_clickbait_cn",
-  "name": "中文标题净化3.0 543词版",
+  "name": "标题屏蔽3.1 543词",
   "description": "屏蔽标题党、营销号、解说号、饭圈黑话及政治黑话",
-  "version": "3.0.0",
+  "version": "3.1",
   "author": "Yuzhong",
   "type": "feed",
   "rules": [
