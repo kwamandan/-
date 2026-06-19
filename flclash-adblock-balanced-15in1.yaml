@@ -1,0 +1,202 @@
+# FlClash / Mihomo balanced adblock profile
+# 版本：15-rule-provider balanced edition
+#
+# 目标：
+# - 保留成熟、常用、相对可靠的广告/隐私/追踪规则
+# - 删除过于小众、重复、实验性或可能误伤较多的规则
+# - 安卓 VPN 接管流量；命中规则即 REJECT；其他全部 DIRECT
+#
+# 导入方式：
+# FlClash -> Configuration/配置 -> New/新增 -> File/文件，导入本文件。
+#
+# 注意：
+# - 这是广告拦截配置，不含代理节点。
+# - 比 23 合 1 更稳，误伤概率更低；比 8 合 1 覆盖更广。
+# - 如果 FlClash 内核不支持 MRS，可删除 awavenue_ads / hagezi_pro_plus / oisd_big 三条 MRS 规则源。
+# - 如果验证码、登录、支付页面异常，优先临时关闭 hagezi_pro_plus 或 oisd_big。
+
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+tcp-concurrent: true
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - 8080-8880
+      override-destination: true
+    TLS:
+      ports:
+        - 443
+        - 8443
+    QUIC:
+      ports:
+        - 443
+        - 8443
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+  fallback:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - https://9.9.9.9/dns-query
+
+rule-providers:
+  loyalsoldier_reject:
+    type: http
+    behavior: domain
+    format: text
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/loyalsoldier-reject.txt
+    interval: 86400
+
+  anti_ad:
+    type: http
+    behavior: domain
+    format: yaml
+    url: "https://anti-ad.net/clash.yaml"
+    path: ./ruleset/anti-ad-clash.yaml
+    interval: 86400
+
+  blackmatrix7_advertising:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.yaml"
+    path: ./ruleset/blackmatrix7-advertising.yaml
+    interval: 86400
+
+  acl4ssr_BanAD:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
+    path: ./ruleset/acl4ssr-BanAD.yaml
+    interval: 86400
+
+  acl4ssr_BanEasyList:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyList.yaml"
+    path: ./ruleset/acl4ssr-BanEasyList.yaml
+    interval: 86400
+
+  acl4ssr_BanEasyListChina:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyListChina.yaml"
+    path: ./ruleset/acl4ssr-BanEasyListChina.yaml
+    interval: 86400
+
+  acl4ssr_BanEasyPrivacy:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyPrivacy.yaml"
+    path: ./ruleset/acl4ssr-BanEasyPrivacy.yaml
+    interval: 86400
+
+  acl4ssr_BanProgramAD:
+    type: http
+    behavior: classical
+    format: yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
+    path: ./ruleset/acl4ssr-BanProgramAD.yaml
+    interval: 86400
+
+  earoftoast_AD:
+    type: http
+    behavior: domain
+    format: yaml
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/AD.yaml"
+    path: ./rules/earoftoast-AD.yaml
+    interval: 86400
+
+  earoftoast_ProgramAD:
+    type: http
+    behavior: domain
+    format: yaml
+    url: "https://raw.githubusercontent.com/earoftoast/clash-rules/main/ProgramAD.yaml"
+    path: ./rules/earoftoast-ProgramAD.yaml
+    interval: 86400
+
+  awavenue_ads:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.mrs"
+    path: ./ruleset/AWAvenue-Ads-Rule-Clash.mrs
+    interval: 86400
+
+  hagezi_pro_plus:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MiHomoer/MiHomo-Hagezi@release/HageziProPlus.mrs"
+    path: ./ruleset/HageziProPlus.mrs
+    interval: 86400
+
+  oisd_big:
+    type: http
+    behavior: domain
+    format: mrs
+    url: "https://github.com/legiz-ru/mihomo-rule-sets/raw/main/oisd/big.mrs"
+    path: ./ruleset/oisd-big.mrs
+    interval: 86400
+
+  metacubex_category_ads_all:
+    type: http
+    behavior: classical
+    format: text
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/category-ads-all.list"
+    path: ./ruleset/metacubex-category-ads-all.list
+    interval: 86400
+
+  clashBlock_youtube:
+    type: http
+    behavior: domain
+    format: yaml
+    url: "https://raw.githubusercontent.com/alfatihart/clashBlock/main/youtube_adblock.yaml"
+    path: ./ruleset/clashBlock-youtube.yaml
+    interval: 86400
+
+rules:
+  - RULE-SET,loyalsoldier_reject,REJECT
+  - RULE-SET,anti_ad,REJECT
+  - RULE-SET,blackmatrix7_advertising,REJECT
+  - RULE-SET,acl4ssr_BanAD,REJECT
+  - RULE-SET,acl4ssr_BanEasyList,REJECT
+  - RULE-SET,acl4ssr_BanEasyListChina,REJECT
+  - RULE-SET,acl4ssr_BanEasyPrivacy,REJECT
+  - RULE-SET,acl4ssr_BanProgramAD,REJECT
+  - RULE-SET,earoftoast_AD,REJECT
+  - RULE-SET,earoftoast_ProgramAD,REJECT
+  - RULE-SET,awavenue_ads,REJECT
+  - RULE-SET,hagezi_pro_plus,REJECT
+  - RULE-SET,oisd_big,REJECT
+  - RULE-SET,metacubex_category_ads_all,REJECT
+  - RULE-SET,clashBlock_youtube,REJECT
+  - MATCH,DIRECT
